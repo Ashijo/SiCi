@@ -6,9 +6,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.Blazor.Component", "Si
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.Contract", "SiCi.Contract\SiCi.Contract.csproj", "{5D360F43-0F8B-492A-BB8C-17635406CCE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.Repository", "SiCi.Repository\SiCi.Repository.csproj", "{002A481A-685C-479A-93D0-272ECFDD400A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.Core.Repository", "SiCi.Core.Repository\SiCi.Core.Repository.csproj", "{002A481A-685C-479A-93D0-272ECFDD400A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.Service", "SiCi.Service\SiCi.Service.csproj", "{22BAF4D5-71B0-47B4-8C64-2B7BC7831D64}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.Core.Service", "SiCi.Core.Service\SiCi.Core.Service.csproj", "{22BAF4D5-71B0-47B4-8C64-2B7BC7831D64}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{170E68BF-50F0-414A-B0F1-C16E9D016134}"
 	ProjectSection(SolutionItems) = preProject
@@ -17,19 +17,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.Blazor.WebClient", "SiCi.Blazor.WebClient\SiCi.Blazor.WebClient.csproj", "{213B7DBC-61BA-492A-B4A9-06647C5C0DAE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.Blazor.Client", "SiCi.Blazor.Client\SiCi.Blazor.Client.csproj", "{213B7DBC-61BA-492A-B4A9-06647C5C0DAE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.Blazor.ClientTransferObject", "SiCi.Blazor.ClientTranferObject\SiCi.Blazor.ClientTransferObject.csproj", "{B01C31B8-F042-4988-AFA1-1D6C0A6F4644}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.Blazor.ComponentTransferObject", "SiCi.Blazor.ComponentTranferObject\SiCi.Blazor.ComponentTransferObject.csproj", "{DAD1E628-CD13-454C-891E-2D1724EF5198}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.ServiceTransferObject", "SiCi.ServiceTranferObject\SiCi.ServiceTransferObject.csproj", "{550CD26C-28AF-46A7-9D03-0B08DAA038C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.Core.ServiceTransferObject", "SiCi.ServiceTranferObject\SiCi.Core.ServiceTransferObject.csproj", "{550CD26C-28AF-46A7-9D03-0B08DAA038C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.RepositoryTransferObject", "SiCi.RepositoryTranferObject\SiCi.RepositoryTransferObject.csproj", "{0104FBBF-ECC3-4EF6-B994-9A8DD39BBAB5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.Core.RepositoryTransferObject", "SiCi.RepositoryTranferObject\SiCi.Core.RepositoryTransferObject.csproj", "{0104FBBF-ECC3-4EF6-B994-9A8DD39BBAB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.WebApi", "SiCi.WebApi\SiCi.WebApi.csproj", "{34F62104-0280-43F9-AB44-5C4C2450AD36}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.Core.WebApi", "SiCi.Core.WebApi\SiCi.Core.WebApi.csproj", "{34F62104-0280-43F9-AB44-5C4C2450AD36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.Domain", "SiCi.Domain\SiCi.Domain.csproj", "{18637C7B-3D60-4EDE-913A-9B76B9DC877B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.Core.Domain", "SiCi.Core.Domain\SiCi.Core.Domain.csproj", "{18637C7B-3D60-4EDE-913A-9B76B9DC877B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

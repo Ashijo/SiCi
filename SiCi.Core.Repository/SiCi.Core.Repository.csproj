@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<RootNamespace>SiCi.Repository</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\SiCi.Core.Domain\SiCi.Core.Domain.csproj" />
+	  <ProjectReference Include="..\SiCi.RepositoryTranferObject\SiCi.Core.RepositoryTransferObject.csproj" />
+	</ItemGroup>
+
+</Project>

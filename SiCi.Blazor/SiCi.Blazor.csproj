@@ -16,7 +16,7 @@
 		<ProjectReference Include="..\SiCi.Blazor.ClientTranferObject\SiCi.Blazor.ClientTransferObject.csproj" />
 		<ProjectReference Include="..\SiCi.Blazor.ComponentTranferObject\SiCi.Blazor.ComponentTransferObject.csproj" />
 		<ProjectReference Include="..\SiCi.Blazor.Component\SiCi.Blazor.Component.csproj" />
-		<ProjectReference Include="..\SiCi.Blazor.WebClient\SiCi.Blazor.WebClient.csproj" />
+		<ProjectReference Include="..\SiCi.Blazor.Client\SiCi.Blazor.Client.csproj" />
 	</ItemGroup>
 
 

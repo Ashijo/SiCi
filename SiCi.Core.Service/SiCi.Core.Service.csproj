@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<RootNamespace>SiCi.Service</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\SiCi.Core.Repository\SiCi.Core.Repository.csproj" />
+		<ProjectReference Include="..\SiCi.ServiceTranferObject\SiCi.Core.ServiceTransferObject.csproj" />
+	</ItemGroup>
+
+</Project>
