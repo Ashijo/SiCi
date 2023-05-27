@@ -10,3 +10,23 @@
 		<b>www.mudblazor.com</b>
 	</MudLink>
 </MudAlert>
+
+<MudButton OnClick="Authorize">auth</MudButton>
+
+<AuthorizeView>
+	<Authorized>
+		This content is displayed only if the user is Authorized
+	</Authorized>
+	<NotAuthorized>
+		This content is displayed if the user is Not Authorized
+	</NotAuthorized>
+</AuthorizeView>
+
+@code
+{
+	void Authorize()
+	{
+		
+	}
+
+}
