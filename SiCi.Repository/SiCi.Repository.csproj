@@ -6,4 +6,9 @@
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\SiCi.Domain\SiCi.Domain.csproj" />
+	  <ProjectReference Include="..\SiCi.RepositoryTranferObject\SiCi.RepositoryTransferObject.csproj" />
+	</ItemGroup>
+
 </Project>

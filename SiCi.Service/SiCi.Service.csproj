@@ -7,7 +7,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\SiCi.Repository\SiCi.Repository.csproj"/>
+		<ProjectReference Include="..\SiCi.Repository\SiCi.Repository.csproj" />
+		<ProjectReference Include="..\SiCi.ServiceTranferObject\SiCi.ServiceTransferObject.csproj" />
 	</ItemGroup>
 
 </Project>

@@ -10,14 +10,26 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.Repository", "SiCi.Rep
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.Service", "SiCi.Service\SiCi.Service.csproj", "{22BAF4D5-71B0-47B4-8C64-2B7BC7831D64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.WebApi", "SiCi.WebApi\SiCi.WebApi.csproj", "{09A48738-B001-4794-B239-9B855ABBCD03}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{170E68BF-50F0-414A-B0F1-C16E9D016134}"
 	ProjectSection(SolutionItems) = preProject
 		SiCi.sln = SiCi.sln
 		.gitignore = .gitignore
 		.editorconfig = .editorconfig
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.Blazor.WebClient", "SiCi.Blazor.WebClient\SiCi.Blazor.WebClient.csproj", "{213B7DBC-61BA-492A-B4A9-06647C5C0DAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.Blazor.ClientTransferObject", "SiCi.Blazor.ClientTranferObject\SiCi.Blazor.ClientTransferObject.csproj", "{B01C31B8-F042-4988-AFA1-1D6C0A6F4644}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.Blazor.ComponentTransferObject", "SiCi.Blazor.ComponentTranferObject\SiCi.Blazor.ComponentTransferObject.csproj", "{DAD1E628-CD13-454C-891E-2D1724EF5198}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.ServiceTransferObject", "SiCi.ServiceTranferObject\SiCi.ServiceTransferObject.csproj", "{550CD26C-28AF-46A7-9D03-0B08DAA038C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.RepositoryTransferObject", "SiCi.RepositoryTranferObject\SiCi.RepositoryTransferObject.csproj", "{0104FBBF-ECC3-4EF6-B994-9A8DD39BBAB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.WebApi", "SiCi.WebApi\SiCi.WebApi.csproj", "{34F62104-0280-43F9-AB44-5C4C2450AD36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiCi.Domain", "SiCi.Domain\SiCi.Domain.csproj", "{18637C7B-3D60-4EDE-913A-9B76B9DC877B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,9 +57,33 @@ Global
 		{22BAF4D5-71B0-47B4-8C64-2B7BC7831D64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22BAF4D5-71B0-47B4-8C64-2B7BC7831D64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22BAF4D5-71B0-47B4-8C64-2B7BC7831D64}.Release|Any CPU.Build.0 = Release|Any CPU
-		{09A48738-B001-4794-B239-9B855ABBCD03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09A48738-B001-4794-B239-9B855ABBCD03}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09A48738-B001-4794-B239-9B855ABBCD03}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09A48738-B001-4794-B239-9B855ABBCD03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{213B7DBC-61BA-492A-B4A9-06647C5C0DAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{213B7DBC-61BA-492A-B4A9-06647C5C0DAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{213B7DBC-61BA-492A-B4A9-06647C5C0DAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{213B7DBC-61BA-492A-B4A9-06647C5C0DAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B01C31B8-F042-4988-AFA1-1D6C0A6F4644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B01C31B8-F042-4988-AFA1-1D6C0A6F4644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B01C31B8-F042-4988-AFA1-1D6C0A6F4644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B01C31B8-F042-4988-AFA1-1D6C0A6F4644}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAD1E628-CD13-454C-891E-2D1724EF5198}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAD1E628-CD13-454C-891E-2D1724EF5198}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAD1E628-CD13-454C-891E-2D1724EF5198}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAD1E628-CD13-454C-891E-2D1724EF5198}.Release|Any CPU.Build.0 = Release|Any CPU
+		{550CD26C-28AF-46A7-9D03-0B08DAA038C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{550CD26C-28AF-46A7-9D03-0B08DAA038C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{550CD26C-28AF-46A7-9D03-0B08DAA038C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{550CD26C-28AF-46A7-9D03-0B08DAA038C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0104FBBF-ECC3-4EF6-B994-9A8DD39BBAB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0104FBBF-ECC3-4EF6-B994-9A8DD39BBAB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0104FBBF-ECC3-4EF6-B994-9A8DD39BBAB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0104FBBF-ECC3-4EF6-B994-9A8DD39BBAB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34F62104-0280-43F9-AB44-5C4C2450AD36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34F62104-0280-43F9-AB44-5C4C2450AD36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34F62104-0280-43F9-AB44-5C4C2450AD36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34F62104-0280-43F9-AB44-5C4C2450AD36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18637C7B-3D60-4EDE-913A-9B76B9DC877B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18637C7B-3D60-4EDE-913A-9B76B9DC877B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18637C7B-3D60-4EDE-913A-9B76B9DC877B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18637C7B-3D60-4EDE-913A-9B76B9DC877B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
