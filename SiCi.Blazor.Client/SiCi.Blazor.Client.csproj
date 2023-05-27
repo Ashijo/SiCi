@@ -1,15 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <RootNamespace>SiCi.Blazor.WebClient</RootNamespace>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<RootNamespace>SiCi.Blazor.WebClient</RootNamespace>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\SiCi.Blazor.ClientTranferObject\SiCi.Blazor.ClientTransferObject.csproj" />
-    <ProjectReference Include="..\SiCi.Contract\SiCi.Contract.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\SiCi.Blazor.ClientTranferObject\SiCi.Blazor.ClientTransferObject.csproj"/>
+		<ProjectReference Include="..\SiCi.Contract\SiCi.Contract.csproj"/>
+	</ItemGroup>
 
 </Project>

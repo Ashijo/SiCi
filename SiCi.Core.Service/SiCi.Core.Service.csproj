@@ -8,8 +8,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\SiCi.Core.Repository\SiCi.Core.Repository.csproj" />
-		<ProjectReference Include="..\SiCi.ServiceTranferObject\SiCi.Core.ServiceTransferObject.csproj" />
+		<ProjectReference Include="..\SiCi.Core.Repository\SiCi.Core.Repository.csproj"/>
+		<ProjectReference Include="..\SiCi.ServiceTranferObject\SiCi.Core.ServiceTransferObject.csproj"/>
 	</ItemGroup>
 
 </Project>

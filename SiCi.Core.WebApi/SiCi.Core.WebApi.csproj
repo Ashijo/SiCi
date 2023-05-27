@@ -1,15 +1,20 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
 	<PropertyGroup>
 		<TargetFramework>net7.0</TargetFramework>
-		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<RootNamespace>SiCi.WebApi</RootNamespace>
+		<ImplicitUsings>enable</ImplicitUsings>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\SiCi.Contract\SiCi.Contract.csproj" />
-		<ProjectReference Include="..\SiCi.Core.Service\SiCi.Core.Service.csproj" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.3"/>
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\SiCi.Contract\SiCi.Contract.csproj"/>
+		<ProjectReference Include="..\SiCi.Core.Service\SiCi.Core.Service.csproj"/>
+		<ProjectReference Include="..\SiCi.ServiceTranferObject\SiCi.Core.ServiceTransferObject.csproj"/>
 	</ItemGroup>
 
 </Project>
