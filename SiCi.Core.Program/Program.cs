@@ -5,7 +5,6 @@ using SiCi.Core.Program;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -21,12 +20,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
-
 
 MeilisearchClient client = new MeilisearchClient("http://localhost:7700", "masterKey");
 var options = new JsonSerializerOptions
@@ -52,5 +47,11 @@ foreach(var prop in movies.Hits) {
 	Console.WriteLine (prop.Title);
 }
 
-
 app.Run();
+
+// TODO :
+// step 1 - generate meili db
+// step 2 - create the other db
+// step 3 - add auth
+// step 4 - front blazor
+// step 5 - front MAUI
