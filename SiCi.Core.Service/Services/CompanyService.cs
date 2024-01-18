@@ -8,7 +8,7 @@ public class CompanyService
 {
 	private readonly CompanyRepository repository;
 
-	CompanyService(CompanyRepository _repository)
+	private CompanyService(CompanyRepository _repository)
 	{
 		repository = _repository;
 	}

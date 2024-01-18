@@ -1,5 +1,5 @@
-using SiCi.Core.Service.Mappers;
 using SiCi.Domain;
+using SiCi.Repository.Mappers;
 using SiCi.RepositoryTransferObject;
 
 namespace SiCi.Repository;

@@ -1,7 +1,7 @@
 using SiCi.Domain;
 using SiCi.RepositoryTransferObject;
 
-namespace SiCi.Core.Service.Mappers;
+namespace SiCi.Repository.Mappers;
 
 internal static class RTOCrossModel
 {

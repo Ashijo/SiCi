@@ -1,8 +1,6 @@
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SiCi.Contract;
 
-namespace SiCi.Core.Service.Services;
+namespace SiCi.Core.WebApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]

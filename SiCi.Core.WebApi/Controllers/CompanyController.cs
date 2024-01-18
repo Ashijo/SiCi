@@ -1,9 +1,10 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SiCi.Contract;
+using SiCi.Core.Service.Services;
 using SiCi.Core.WebApi.Mappers;
 
-namespace SiCi.Core.Service.Services;
+namespace SiCi.Core.WebApi.Controllers;
 
 public class CompanyController(CompanyService service) : APIControllerBase
 {

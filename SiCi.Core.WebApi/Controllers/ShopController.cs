@@ -1,5 +1,5 @@
-namespace SiCi.Core.Service.Services;
+namespace SiCi.Core.WebApi.Controllers;
 
-public class ShopController 
+public class ShopController
 {
 }
