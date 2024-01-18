@@ -20,10 +20,3 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-
-// TODO :
-// step 1 - generate meili db
-// step 2 - create the other db
-// step 3 - add auth
-// step 4 - front blazor
-// step 5 - front MAUI
