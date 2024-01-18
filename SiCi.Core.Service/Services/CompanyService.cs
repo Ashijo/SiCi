@@ -4,25 +4,18 @@ using SiCi.ServiceTransferObject;
 
 namespace SiCi.Core.Service.Services;
 
-public class CompanyService
+public class CompanyService(CompanyRepository _repository)
 {
-	private readonly CompanyRepository repository;
-
-	private CompanyService(CompanyRepository _repository)
-	{
-		repository = _repository;
-	}
-
 	public CompanySTO Create(CompanySTO companySTO)
 	{
 		var rtoToAdd = companySTO.ToSO().ToRTO();
-		var companyAdded = repository.Add(rtoToAdd);
+		var companyAdded = _repository.Add(rtoToAdd);
 		return companyAdded.ToSO().ToSTO();
 	}
 
 	public CompanySTO[] GetAll()
 	{
-		return repository.GetAll()
+		return _repository.GetAll()
 			.Select(RTOCrossSO.ToSO)
 			.Select(STOCrossSO.ToSTO)
 			.ToArray();
@@ -30,12 +23,12 @@ public class CompanyService
 
 	public CompanySTO Update(CompanySTO companySTO)
 	{
-		var companyRTO = repository.Update(companySTO.ToSO().ToRTO());
+		var companyRTO = _repository.Update(companySTO.ToSO().ToRTO());
 		return companyRTO.ToSO().ToSTO();
 	}
 
 	public void Delete(Guid id)
 	{
-		repository.Delete(id);
+		_repository.Delete(id);
 	}
 }

@@ -18,7 +18,7 @@ public class BaseRepository<T> where T : IBaseModel
 
 	protected T Add(T model)
 	{
-		model.Id = new Guid();
+		model.Id = Guid.NewGuid();
 		model.CreationDate = new DateTime();
 		Models.Add(model);
 		return model;
