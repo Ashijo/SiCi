@@ -4,7 +4,7 @@ namespace SiCi.Repository;
 
 public class BaseRepository<T> where T : IBaseModel
 {
-	private List<T> Models { get; set; } = new();
+	private List<T> Models { get; } = new();
 
 	public T? Get(Guid Id)
 	{

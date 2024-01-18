@@ -1,6 +1,6 @@
 namespace SiCi.Domain;
 
-public class Price : IBaseModel
+public class Price : IBaseContract
 {
 	public decimal Value { get; set; }
 	public Product Product { get; set; }

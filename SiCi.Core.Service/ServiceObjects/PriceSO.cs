@@ -1,10 +1,10 @@
-namespace SiCi.Domain;
+namespace SiCi.Core.Service.ServiceObjects;
 
-public class Price : IBaseModel
+public class PriceSO : IBaseServiceObject
 {
 	public decimal Value { get; set; }
-	public Product Product { get; set; }
-	public Shop Shop { get; set; }
+	public ProductSO ProductSo { get; set; }
+	public ShopSO ShopSo { get; set; }
 	public Guid Id { get; set; }
 	public bool Deleted { get; set; }
 	public DateTime CreationDate { get; set; }

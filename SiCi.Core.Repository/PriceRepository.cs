@@ -4,5 +4,4 @@ namespace SiCi.Repository;
 
 public class PriceRepository : BaseRepository<Price>
 {
-	
 }

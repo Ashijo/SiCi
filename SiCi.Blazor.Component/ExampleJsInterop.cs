@@ -19,12 +19,6 @@ public class ExampleJsInterop : IAsyncDisposable
 			"import", "./_content/SiCi.Blazor.Component/exampleJsInterop.js").AsTask());
 	}
 
-	public async ValueTask<string> Prompt(string message)
-	{
-		var module = await moduleTask.Value;
-		return await module.InvokeAsync<string>("showPrompt", message);
-	}
-
 	public async ValueTask DisposeAsync()
 	{
 		if (moduleTask.IsValueCreated)
@@ -32,5 +26,11 @@ public class ExampleJsInterop : IAsyncDisposable
 			var module = await moduleTask.Value;
 			await module.DisposeAsync();
 		}
+	}
+
+	public async ValueTask<string> Prompt(string message)
+	{
+		var module = await moduleTask.Value;
+		return await module.InvokeAsync<string>("showPrompt", message);
 	}
 }
