@@ -1,4 +1,4 @@
-namespace SiCi.Domain;
+namespace SiCi.Contract;
 
 public class Shop : IBaseContract
 {

@@ -1,6 +1,6 @@
 namespace SiCi.Core.Service.ServiceObjects;
 
-public class PriceSO : IBaseServiceObject
+internal class PriceSO : IBaseServiceObject
 {
 	public decimal Value { get; set; }
 	public ProductSO ProductSo { get; set; }

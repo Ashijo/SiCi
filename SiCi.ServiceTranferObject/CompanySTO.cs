@@ -1,4 +1,4 @@
-namespace SiCi.Domain;
+namespace SiCi.ServiceTransferObject;
 
 public class CompanySTO : IBaseServiceTransfereObject
 {

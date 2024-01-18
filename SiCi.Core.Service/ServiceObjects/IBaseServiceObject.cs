@@ -1,10 +1,10 @@
 namespace SiCi.Core.Service.ServiceObjects;
 
-public interface IBaseServiceObject
+internal interface IBaseServiceObject
 {
-	public Guid Id { get; set; }
-	public bool Deleted { get; set; }
-	public DateTime CreationDate { get; set; }
-	public DateTime LastUpdateDate { get; set; }
-	public DateTime DeletionDate { get; set; }
+	internal Guid Id { get; set; }
+	internal bool Deleted { get; set; }
+	internal DateTime CreationDate { get; set; }
+	internal DateTime LastUpdateDate { get; set; }
+	internal DateTime DeletionDate { get; set; }
 }

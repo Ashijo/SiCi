@@ -6,17 +6,17 @@ public class BaseRepository<T> where T : IBaseModel
 {
 	private List<T> Models { get; } = new();
 
-	public T? Get(Guid Id)
+	protected T? GetById(Guid id)
 	{
-		return Models.Find(o => o.Id == Id);
+		return Models.Find(o => o.Id == id);
 	}
 
-	public T[] GetAll()
+	protected T[] GetAllNotDeleted()
 	{
 		return Models.ToArray();
 	}
 
-	public T Add(T model)
+	protected T Add(T model)
 	{
 		model.Id = new Guid();
 		model.CreationDate = new DateTime();
@@ -24,7 +24,7 @@ public class BaseRepository<T> where T : IBaseModel
 		return model;
 	}
 
-	public T Update(T model)
+	protected T Update(T model)
 	{
 		var index = Models.FindIndex(m => m.Id == model.Id);
 		if (index == -1)
@@ -37,9 +37,9 @@ public class BaseRepository<T> where T : IBaseModel
 		return Models[index];
 	}
 
-	public void Delete(Guid Id)
+	protected void SoftDelete(Guid id)
 	{
-		var model = Models.Find(m => m.Id == Id);
+		var model = Models.Find(m => m.Id == id);
 		if (model == null)
 		{
 			throw new InvalidOperationException("Object not found in repository");

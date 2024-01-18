@@ -1,4 +1,4 @@
-namespace SiCi.Domain;
+namespace SiCi.ServiceTransferObject;
 
 public interface IBaseServiceTransfereObject
 {

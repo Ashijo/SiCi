@@ -1,4 +1,4 @@
-namespace SiCi.Domain;
+namespace SiCi.RepositoryTransferObject;
 
 public class CompanyRTO : IBaseRepositoryTransfereObject
 {

@@ -1,6 +1,6 @@
 namespace SiCi.Core.Service.ServiceObjects;
 
-public class ShopSO : IBaseServiceObject
+internal class ShopSO : IBaseServiceObject
 {
 	public string Name { get; set; }
 	public Guid Id { get; set; }

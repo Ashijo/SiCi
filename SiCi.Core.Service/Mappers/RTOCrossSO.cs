@@ -1,11 +1,11 @@
 using SiCi.Core.Service.ServiceObjects;
-using SiCi.Domain;
+using SiCi.RepositoryTransferObject;
 
 namespace SiCi.Core.Service.Mappers;
 
-public class RTOCrossSO
+internal static class RTOCrossSO
 {
-	public static CompanyRTO SOToRTO(CompanySO so)
+	internal static CompanyRTO ToRTO(this CompanySO so)
 	{
 		return new CompanyRTO
 		{
@@ -18,7 +18,7 @@ public class RTOCrossSO
 		};
 	}
 
-	public static PriceRTO SOToRTO(PriceSO so)
+	internal static PriceRTO ToRTO(this PriceSO so)
 	{
 		return new PriceRTO
 		{
@@ -31,7 +31,7 @@ public class RTOCrossSO
 		};
 	}
 
-	public static ProductRTO SOToRTO(ProductSO so)
+	internal static ProductRTO ToRTO(this ProductSO so)
 	{
 		return new ProductRTO
 		{
@@ -44,7 +44,7 @@ public class RTOCrossSO
 		};
 	}
 
-	public static ShopRTO SOToRTO(ShopSO so)
+	internal static ShopRTO ToRTO(this ShopSO so)
 	{
 		return new ShopRTO
 		{
@@ -57,7 +57,7 @@ public class RTOCrossSO
 		};
 	}
 
-	public static CompanySO RTOToSO(CompanyRTO rto)
+	internal static CompanySO ToSO(this CompanyRTO rto)
 	{
 		return new CompanySO
 		{
@@ -70,7 +70,7 @@ public class RTOCrossSO
 		};
 	}
 
-	public static PriceSO RTOToSO(PriceRTO rto)
+	internal static PriceSO ToSO(this PriceRTO rto)
 	{
 		return new PriceSO
 		{
@@ -83,7 +83,7 @@ public class RTOCrossSO
 		};
 	}
 
-	public static ProductSO RTOToSO(ProductRTO rto)
+	internal static ProductSO ToSO(this ProductRTO rto)
 	{
 		return new ProductSO
 		{
@@ -96,7 +96,7 @@ public class RTOCrossSO
 		};
 	}
 
-	public static ShopSO RTOToSO(ShopRTO rto)
+	internal static ShopSO ToSO(this ShopRTO rto)
 	{
 		return new ShopSO
 		{
