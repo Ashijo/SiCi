@@ -1,8 +1,7 @@
 namespace SiCi.Contract;
 
-public class Company : IBaseContract
+public interface IContractModel
 {
-	public string Name { get; set; }
 	public Guid? Id { get; set; }
 	public bool Deleted { get; set; }
 	public DateTime CreationDate { get; set; }

@@ -1,4 +1,8 @@
 using SiCi.Contract;
+using SiCi.Contract.Company;
+using SiCi.Contract.Price;
+using SiCi.Contract.Product;
+using SiCi.Contract.Shop;
 using SiCi.ServiceTransferObject;
 
 namespace SiCi.Core.WebApi.Mappers;

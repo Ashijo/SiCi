@@ -19,7 +19,7 @@ public class BaseRepository<T> where T : IBaseModel
 	protected T Add(T model)
 	{
 		model.Id = Guid.NewGuid();
-		model.CreationDate = new DateTime();
+		model.CreationDate = DateTime.UtcNow;
 		Models.Add(model);
 		return model;
 	}
@@ -32,7 +32,7 @@ public class BaseRepository<T> where T : IBaseModel
 			throw new InvalidOperationException("Object not found in repository");
 		}
 
-		model.LastUpdateDate = DateTime.Now;
+		model.LastUpdateDate = DateTime.UtcNow;
 		Models[index] = model;
 		return Models[index];
 	}

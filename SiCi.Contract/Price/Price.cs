@@ -1,10 +1,10 @@
-namespace SiCi.Contract;
+namespace SiCi.Contract.Price;
 
-public class Price : IBaseContract
+public class Price : IContractModel
 {
 	public decimal Value { get; set; }
-	public Product Product { get; set; }
-	public Shop Shop { get; set; }
+	public Product.Product Product { get; set; }
+	public Shop.Shop Shop { get; set; }
 	public Guid? Id { get; set; }
 	public bool Deleted { get; set; }
 	public DateTime CreationDate { get; set; }

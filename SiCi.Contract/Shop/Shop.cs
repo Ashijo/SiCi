@@ -1,6 +1,6 @@
-namespace SiCi.Contract;
+namespace SiCi.Contract.Shop;
 
-public class Product : IBaseContract
+public class Shop : IContractModel
 {
 	public string Name { get; set; }
 	public Guid? Id { get; set; }

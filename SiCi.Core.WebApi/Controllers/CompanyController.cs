@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SiCi.Contract;
+using SiCi.Contract.Company;
+using SiCi.Contract.Company.Requests;
+using SiCi.Contract.Company.Results;
 using SiCi.Core.Service.Services;
 using SiCi.Core.WebApi.Mappers;
 
@@ -13,13 +15,16 @@ public class CompanyController(CompanyService service) : APIControllerBase
 	[HttpPost]
 	[ProducesResponseType(StatusCodes.Status201Created)]
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
-	public ActionResult<Company> Create(Company company)
+	public ActionResult<CreateCompanyResult> Create(CreateCompanyRequest companyRequest)
 	{
-		var companyCreated = _service.Create(company.ToSTO());
+		var companyCreated = _service
+			.Create(companyRequest.Company.ToSTO())
+			.ToContract();
+		
 		return CreatedAtAction(
 			nameof(Create),
 			new { id = companyCreated.Id },
-			companyCreated);
+			new CreateCompanyResult(companyCreated));
 	}
 
 	[HttpGet]
