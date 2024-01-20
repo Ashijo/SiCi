@@ -1,11 +1,17 @@
 namespace SiCi.ServiceTransferObject;
 
-public class CompanySTO : IBaseServiceTransferObject
-{
-	public string Name { get; set; }
-	public Guid? Id { get; set; }
-	public bool Deleted { get; set; }
-	public DateTime CreationDate { get; set; }
-	public DateTime LastUpdateDate { get; set; }
-	public DateTime DeletionDate { get; set; }
-}
+public record RCompanySTO(
+	string Name,
+	Guid Id,
+	bool Deleted,
+	DateTime CreationDate,
+	DateTime? LastUpdateDate = null,
+	DateTime? DeletionDate = null) : IBaseServiceTransferObject;
+
+public record RCompanySTOResult(RCompanySTO Company);
+
+public record RCompaniesSTOResult(RCompanySTO[] Companies);
+
+public record RCreateCompanySTORequest(string Name);
+
+public record RUpdateCompanySTORequest(string Name);

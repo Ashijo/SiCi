@@ -6,24 +6,23 @@ namespace SiCi.Core.Service.Services;
 
 public class CompanyService(CompanyRepository _repository)
 {
-	public CompanySTO Create(CompanySTO companySTO)
+	public RCompanySTOResult Create(RCreateCompanySTORequest companySTO)
 	{
 		var rtoToAdd = companySTO.ToSO().ToRTO();
 		var companyAdded = _repository.Add(rtoToAdd);
 		return companyAdded.ToSO().ToSTO();
 	}
 
-	public CompanySTO[] GetAll()
+	public RCompaniesSTOResult GetAll()
 	{
 		return _repository.GetAll()
-			.Select(RTOCrossSO.ToSO)
-			.Select(STOCrossSO.ToSTO)
-			.ToArray();
+			.ToSO()
+			.ToSTO();
 	}
 
-	public CompanySTO Update(CompanySTO companySTO)
+	public RCompanySTOResult Update(Guid id, RUpdateCompanySTORequest companySTO)
 	{
-		var companyRTO = _repository.Update(companySTO.ToSO().ToRTO());
+		var companyRTO = _repository.Update(id, companySTO.ToSO().ToRTO());
 		return companyRTO.ToSO().ToSTO();
 	}
 

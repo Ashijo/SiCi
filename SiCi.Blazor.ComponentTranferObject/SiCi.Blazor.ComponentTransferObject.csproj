@@ -6,4 +6,8 @@
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
+	<ItemGroup>
+		<PackageReference Include="MappingGenerator" Version="2023.7.64"/>
+	</ItemGroup>
+
 </Project>

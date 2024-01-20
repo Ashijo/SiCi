@@ -6,29 +6,29 @@ namespace SiCi.Repository;
 
 public class CompanyRepository : BaseRepository<Company>
 {
-	public CompanyRTO? Get(Guid id)
+	public RCompanyRTOResult? Get(Guid id)
 	{
 		//TODO: Fix possible null reference
 		return GetById(id).ToRTO();
 	}
 
-	public CompanyRTO[] GetAll()
+	public RCompaniesRTOResult GetAll()
 	{
-		return GetAllNotDeleted()
-			.Select(RTOCrossModel.ToRTO)
-			.ToArray();
+		return GetAllNotDeleted().ToRTO();
 	}
 
-	public CompanyRTO Add(CompanyRTO company)
+	public RCompanyRTOResult Add(RCreateCompanyRTORequest request)
 	{
-		var model = company.ToModel();
+		var model = new Company { Name = request.Name };
+
 		var addedModel = Add(model);
 		return addedModel.ToRTO();
 	}
 
-	public CompanyRTO Update(CompanyRTO company)
+	public RCompanyRTOResult Update(Guid id, RUpdateCompanyRTORequest request)
 	{
-		var model = company.ToModel();
+		var model = GetById(id);
+		model.Name = request.Name;
 		var updatedModel = Update(model);
 		return updatedModel.ToRTO();
 	}

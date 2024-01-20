@@ -12,4 +12,8 @@
 		<ProjectReference Include="..\SiCi.RepositoryTranferObject\SiCi.Core.RepositoryTransferObject.csproj"/>
 	</ItemGroup>
 
+	<ItemGroup>
+		<PackageReference Include="MappingGenerator" Version="2023.7.64"/>
+	</ItemGroup>
+
 </Project>

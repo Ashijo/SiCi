@@ -1,115 +1,40 @@
-using SiCi.Contract;
 using SiCi.Contract.Company;
-using SiCi.Contract.Price;
-using SiCi.Contract.Product;
-using SiCi.Contract.Shop;
 using SiCi.ServiceTransferObject;
 
 namespace SiCi.Core.WebApi.Mappers;
 
 internal static class STOCrossContract
 {
-	internal static Company ToContract(this CompanySTO sto)
+	private static Company ToContract(this RCompanySTO sto)
 	{
-		return new Company
-		{
-			Id = sto.Id,
-			Name = sto.Name,
-			Deleted = sto.Deleted,
-			CreationDate = sto.CreationDate,
-			LastUpdateDate = sto.LastUpdateDate,
-			DeletionDate = sto.DeletionDate
-		};
+		return new Company(
+			sto.Name,
+			sto.Id,
+			sto.Deleted,
+			sto.CreationDate,
+			sto.LastUpdateDate,
+			sto.DeletionDate);
 	}
 
-	internal static Price ToContract(this PriceSTO sto)
+	internal static RCompanyResult ToContract(this RCompanySTOResult sto)
 	{
-		return new Price
-		{
-			Id = sto.Id,
-			Value = sto.Value,
-			Deleted = sto.Deleted,
-			CreationDate = sto.CreationDate,
-			LastUpdateDate = sto.LastUpdateDate,
-			DeletionDate = sto.DeletionDate
-		};
+		return new RCompanyResult(
+			sto.Company.ToContract());
 	}
 
-	internal static Product ToContract(this ProductSTO sto)
+	internal static RCompaniesResult ToContract(this RCompaniesSTOResult sto)
 	{
-		return new Product
-		{
-			Id = sto.Id,
-			Name = sto.Name,
-			Deleted = sto.Deleted,
-			CreationDate = sto.CreationDate,
-			LastUpdateDate = sto.LastUpdateDate,
-			DeletionDate = sto.DeletionDate
-		};
+		return new RCompaniesResult(
+			sto.Companies.Select(ToContract).ToArray());
 	}
 
-	internal static Shop ToContract(this ShopSTO sto)
+	internal static RCreateCompanySTORequest ToSTO(this RCreateCompanyRequest contract)
 	{
-		return new Shop
-		{
-			Id = sto.Id,
-			Name = sto.Name,
-			Deleted = sto.Deleted,
-			CreationDate = sto.CreationDate,
-			LastUpdateDate = sto.LastUpdateDate,
-			DeletionDate = sto.DeletionDate
-		};
+		return new RCreateCompanySTORequest(contract.Name);
 	}
 
-	internal static CompanySTO ToSTO(this Company contract)
+	internal static RUpdateCompanySTORequest ToSTO(this RUpdateCompanyRequest contract)
 	{
-		return new CompanySTO
-		{
-			Id = contract.Id,
-			Name = contract.Name,
-			Deleted = contract.Deleted,
-			CreationDate = contract.CreationDate,
-			LastUpdateDate = contract.LastUpdateDate,
-			DeletionDate = contract.DeletionDate
-		};
-	}
-
-	internal static PriceSTO ToSTO(this Price contract)
-	{
-		return new PriceSTO
-		{
-			Id = contract.Id,
-			Value = contract.Value,
-			Deleted = contract.Deleted,
-			CreationDate = contract.CreationDate,
-			LastUpdateDate = contract.LastUpdateDate,
-			DeletionDate = contract.DeletionDate
-		};
-	}
-
-	internal static ProductSTO ToSTO(this Product contract)
-	{
-		return new ProductSTO
-		{
-			Id = contract.Id,
-			Name = contract.Name,
-			Deleted = contract.Deleted,
-			CreationDate = contract.CreationDate,
-			LastUpdateDate = contract.LastUpdateDate,
-			DeletionDate = contract.DeletionDate
-		};
-	}
-
-	internal static ShopSTO ToSTO(this Shop contract)
-	{
-		return new ShopSTO
-		{
-			Id = contract.Id,
-			Name = contract.Name,
-			Deleted = contract.Deleted,
-			CreationDate = contract.CreationDate,
-			LastUpdateDate = contract.LastUpdateDate,
-			DeletionDate = contract.DeletionDate
-		};
+		return new RUpdateCompanySTORequest(contract.Name);
 	}
 }

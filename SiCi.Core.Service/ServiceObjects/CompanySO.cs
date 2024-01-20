@@ -1,11 +1,17 @@
 namespace SiCi.Core.Service.ServiceObjects;
 
-internal class CompanySO : IBaseServiceObject
-{
-	public string Name { get; set; }
-	public Guid? Id { get; set; }
-	public bool Deleted { get; set; }
-	public DateTime CreationDate { get; set; }
-	public DateTime LastUpdateDate { get; set; }
-	public DateTime DeletionDate { get; set; }
-}
+public record RCompanySO(
+	string Name,
+	Guid Id,
+	bool Deleted,
+	DateTime CreationDate,
+	DateTime? LastUpdateDate = null,
+	DateTime? DeletionDate = null) : IBaseServiceObject;
+
+public record RCompanySOResult(RCompanySO Company);
+
+public record RCompaniesSOResult(RCompanySO[] Companies);
+
+public record RCreateCompanySORequest(string Name);
+
+public record RUpdateCompanySORequest(string Name);

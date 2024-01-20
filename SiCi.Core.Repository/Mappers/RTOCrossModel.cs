@@ -5,107 +5,39 @@ namespace SiCi.Repository.Mappers;
 
 internal static class RTOCrossModel
 {
-	internal static CompanyRTO ToRTO(this Company model)
+	private static RCompanyRTO CompanyToRTOObject(this Company model)
 	{
-		return new CompanyRTO
-		{
-			Id = model.Id,
-			Name = model.Name,
-			Deleted = model.Deleted,
-			CreationDate = model.CreationDate,
-			LastUpdateDate = model.LastUpdateDate,
-			DeletionDate = model.DeletionDate
-		};
+		return new RCompanyRTO(
+			model.Name,
+			model.Id,
+			model.Deleted,
+			model.CreationDate,
+			model.LastUpdateDate,
+			model.DeletionDate);
 	}
 
-	internal static PriceRTO ToRTO(this Price model)
+	internal static RCompanyRTOResult ToRTO(this Company model)
 	{
-		return new PriceRTO
-		{
-			Id = model.Id,
-			Value = model.Value,
-			Deleted = model.Deleted,
-			CreationDate = model.CreationDate,
-			LastUpdateDate = model.LastUpdateDate,
-			DeletionDate = model.DeletionDate
-		};
+		return new RCompanyRTOResult(
+			model.CompanyToRTOObject());
 	}
 
-	internal static ProductRTO ToRTO(this Product model)
+	internal static RCompaniesRTOResult ToRTO(this Company[] models)
 	{
-		return new ProductRTO
-		{
-			Id = model.Id,
-			Name = model.Name,
-			Deleted = model.Deleted,
-			CreationDate = model.CreationDate,
-			LastUpdateDate = model.LastUpdateDate,
-			DeletionDate = model.DeletionDate
-		};
+		return new RCompaniesRTOResult(
+			models.Select(CompanyToRTOObject).ToArray());
 	}
 
-	internal static ShopRTO ToRTO(this Shop model)
-	{
-		return new ShopRTO
-		{
-			Id = model.Id,
-			Name = model.Name,
-			Deleted = model.Deleted,
-			CreationDate = model.CreationDate,
-			LastUpdateDate = model.LastUpdateDate,
-			DeletionDate = model.DeletionDate
-		};
-	}
-
-	internal static Company ToModel(this CompanyRTO rto)
-	{
-		return new Company
-		{
-			Id = rto.Id,
-			Name = rto.Name,
-			Deleted = rto.Deleted,
-			CreationDate = rto.CreationDate,
-			LastUpdateDate = rto.LastUpdateDate,
-			DeletionDate = rto.DeletionDate
-		};
-	}
-
-	internal static Price ToModel(this PriceRTO rto)
-	{
-		return new Price
-		{
-			Id = rto.Id,
-			Value = rto.Value,
-			Deleted = rto.Deleted,
-			CreationDate = rto.CreationDate,
-			LastUpdateDate = rto.LastUpdateDate,
-			DeletionDate = rto.DeletionDate
-		};
-	}
-
-	internal static Product ToModel(this ProductRTO rto)
-	{
-		return new Product
-		{
-			Id = rto.Id,
-			Name = rto.Name,
-			Deleted = rto.Deleted,
-			CreationDate = rto.CreationDate,
-			LastUpdateDate = rto.LastUpdateDate,
-			DeletionDate = rto.DeletionDate
-		};
-	}
-
-	internal static Shop ToModel(this ShopRTO rto)
-	{
-		return new Shop
-		{
-			Id = rto.Id,
-			Name = rto.Name,
-			Deleted = rto.Deleted,
-			CreationDate = rto.CreationDate,
-			LastUpdateDate = rto.LastUpdateDate,
-			DeletionDate = rto.DeletionDate
-		};
-	}
+	// internal static Company ToModel(this RCreateCompanyRTORequest rto)
+	// {
+	// 	return new Company
+	// 	{
+	// 		Id = rto.Id,
+	// 		Name = rto.Name,
+	// 		Deleted = rto.Deleted,
+	// 		CreationDate = rto.CreationDate,
+	// 		LastUpdateDate = rto.LastUpdateDate,
+	// 		DeletionDate = rto.DeletionDate
+	// 	};
+	// }
 }

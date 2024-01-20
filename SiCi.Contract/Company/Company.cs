@@ -1,11 +1,9 @@
 namespace SiCi.Contract.Company;
 
-public class Company : IContractModel
-{
-	public string Name { get; set; }
-	public Guid? Id { get; set; }
-	public bool Deleted { get; set; }
-	public DateTime CreationDate { get; set; }
-	public DateTime LastUpdateDate { get; set; }
-	public DateTime DeletionDate { get; set; }
-}
+public record Company(
+	string Name,
+	Guid Id,
+	bool Deleted,
+	DateTime CreationDate,
+	DateTime? LastUpdateDate,
+	DateTime? DeletionDate) : IContractModel;

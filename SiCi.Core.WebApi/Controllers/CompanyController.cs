@@ -1,8 +1,6 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SiCi.Contract.Company;
-using SiCi.Contract.Company.Requests;
-using SiCi.Contract.Company.Results;
 using SiCi.Core.Service.Services;
 using SiCi.Core.WebApi.Mappers;
 
@@ -15,34 +13,33 @@ public class CompanyController(CompanyService service) : APIControllerBase
 	[HttpPost]
 	[ProducesResponseType(StatusCodes.Status201Created)]
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
-	public ActionResult<CreateCompanyResult> Create(CreateCompanyRequest companyRequest)
+	public ActionResult<RCompanyResult> Create([FromBody] RCreateCompanyRequest companyRequest)
 	{
 		var companyCreated = _service
-			.Create(companyRequest.Company.ToSTO())
+			.Create(companyRequest.ToSTO())
 			.ToContract();
-		
+
 		return CreatedAtAction(
 			nameof(Create),
-			new { id = companyCreated.Id },
-			new CreateCompanyResult(companyCreated));
+			new { id = companyCreated.Company.Id },
+			companyCreated);
 	}
 
 	[HttpGet]
 	[ProducesResponseType(StatusCodes.Status200OK)]
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
-	public Company[] GetAll()
+	public RCompaniesResult GetAll()
 	{
-		return _service.GetAll()
-			.Select(STOCrossContract.ToContract)
-			.ToArray();
+		return _service.GetAll().ToContract();
 	}
 
 	[HttpPatch]
 	[ProducesResponseType(StatusCodes.Status200OK)]
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
-	public Company Update(Company company)
+	[Route("{id:guid}")]
+	public RCompanyResult Update([FromRoute] Guid id, [FromBody] RUpdateCompanyRequest company)
 	{
-		var updatedCompany = _service.Update(company.ToSTO());
+		var updatedCompany = _service.Update(id, company.ToSTO());
 		return updatedCompany.ToContract();
 	}
 }

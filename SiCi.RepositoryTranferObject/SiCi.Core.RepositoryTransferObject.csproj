@@ -7,4 +7,8 @@
 		<RootNamespace>SiCi.RepositoryTransferObject</RootNamespace>
 	</PropertyGroup>
 
+	<ItemGroup>
+		<PackageReference Include="MappingGenerator" Version="2023.7.64"/>
+	</ItemGroup>
+
 </Project>

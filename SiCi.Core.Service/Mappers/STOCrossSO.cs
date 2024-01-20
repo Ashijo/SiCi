@@ -5,107 +5,36 @@ namespace SiCi.Core.Service.Mappers;
 
 internal static class STOCrossSO
 {
-	internal static CompanySTO ToSTO(this CompanySO so)
+	private static RCompanySTO ToSTO(this RCompanySO so)
 	{
-		return new CompanySTO
-		{
-			Id = so.Id,
-			Name = so.Name,
-			Deleted = so.Deleted,
-			CreationDate = so.CreationDate,
-			LastUpdateDate = so.LastUpdateDate,
-			DeletionDate = so.DeletionDate
-		};
+		return new RCompanySTO(
+			so.Name,
+			so.Id,
+			so.Deleted,
+			so.CreationDate,
+			so.LastUpdateDate,
+			so.DeletionDate);
 	}
 
-	internal static PriceSTO ToSTO(this PriceSO so)
+	internal static RCompanySTOResult ToSTO(this RCompanySOResult so)
 	{
-		return new PriceSTO
-		{
-			Id = so.Id,
-			Value = so.Value,
-			Deleted = so.Deleted,
-			CreationDate = so.CreationDate,
-			LastUpdateDate = so.LastUpdateDate,
-			DeletionDate = so.DeletionDate
-		};
+		return new RCompanySTOResult(
+			so.Company.ToSTO());
 	}
 
-	internal static ProductSTO ToSTO(this ProductSO so)
+	internal static RCompaniesSTOResult ToSTO(this RCompaniesSOResult so)
 	{
-		return new ProductSTO
-		{
-			Id = so.Id,
-			Name = so.Name,
-			Deleted = so.Deleted,
-			CreationDate = so.CreationDate,
-			LastUpdateDate = so.LastUpdateDate,
-			DeletionDate = so.DeletionDate
-		};
+		return new RCompaniesSTOResult(
+			so.Companies.Select(ToSTO).ToArray());
 	}
 
-	internal static ShopSTO ToSTO(this ShopSO so)
+	internal static RCreateCompanySORequest ToSO(this RCreateCompanySTORequest sto)
 	{
-		return new ShopSTO
-		{
-			Id = so.Id,
-			Name = so.Name,
-			Deleted = so.Deleted,
-			CreationDate = so.CreationDate,
-			LastUpdateDate = so.LastUpdateDate,
-			DeletionDate = so.DeletionDate
-		};
+		return new RCreateCompanySORequest(sto.Name);
 	}
 
-	internal static CompanySO ToSO(this CompanySTO sto)
+	internal static RUpdateCompanySORequest ToSO(this RUpdateCompanySTORequest sto)
 	{
-		return new CompanySO
-		{
-			Id = sto.Id,
-			Name = sto.Name,
-			Deleted = sto.Deleted,
-			CreationDate = sto.CreationDate,
-			LastUpdateDate = sto.LastUpdateDate,
-			DeletionDate = sto.DeletionDate
-		};
-	}
-
-	internal static PriceSO ToSO(this PriceSTO sto)
-	{
-		return new PriceSO
-		{
-			Id = sto.Id,
-			Value = sto.Value,
-			Deleted = sto.Deleted,
-			CreationDate = sto.CreationDate,
-			LastUpdateDate = sto.LastUpdateDate,
-			DeletionDate = sto.DeletionDate
-		};
-	}
-
-	internal static ProductSO ToSO(this ProductSTO sto)
-	{
-		return new ProductSO
-		{
-			Id = sto.Id,
-			Name = sto.Name,
-			Deleted = sto.Deleted,
-			CreationDate = sto.CreationDate,
-			LastUpdateDate = sto.LastUpdateDate,
-			DeletionDate = sto.DeletionDate
-		};
-	}
-
-	internal static ShopSO ToSO(this ShopSTO sto)
-	{
-		return new ShopSO
-		{
-			Id = sto.Id,
-			Name = sto.Name,
-			Deleted = sto.Deleted,
-			CreationDate = sto.CreationDate,
-			LastUpdateDate = sto.LastUpdateDate,
-			DeletionDate = sto.DeletionDate
-		};
+		return new RUpdateCompanySORequest(sto.Name);
 	}
 }

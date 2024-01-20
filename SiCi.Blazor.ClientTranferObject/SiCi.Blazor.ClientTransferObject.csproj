@@ -7,4 +7,8 @@
 		<RootNamespace>SiCi.Blazor.ClientTransfe</RootNamespace>
 	</PropertyGroup>
 
+	<ItemGroup>
+		<PackageReference Include="MappingGenerator" Version="2023.7.64"/>
+	</ItemGroup>
+
 </Project>
