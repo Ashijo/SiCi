@@ -1,17 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
-	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
-		<Nullable>enable</Nullable>
-		<ImplicitUsings>enable</ImplicitUsings>
-	</PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
 
-	<ItemGroup>
-		<PackageReference Include="MappingGenerator" Version="2023.7.64"/>
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.1"/>
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.1" PrivateAssets="all"/>
-		<PackageReference Include="MudBlazor" Version="6.12.0"/>
-	</ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="MudBlazor" Version="6.*" />
+  </ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\SiCi.Blazor.ClientTranferObject\SiCi.Blazor.ClientTransferObject.csproj"/>
@@ -19,6 +17,5 @@
 		<ProjectReference Include="..\SiCi.Blazor.Component\SiCi.Blazor.Component.csproj"/>
 		<ProjectReference Include="..\SiCi.Blazor.Client\SiCi.Blazor.Client.csproj"/>
 	</ItemGroup>
-
-
+	
 </Project>

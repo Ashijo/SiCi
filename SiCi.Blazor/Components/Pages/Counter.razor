@@ -1,4 +1,7 @@
 ﻿@page "/counter"
+@rendermode InteractiveServer
+
+<MyMudProviders />
 
 <PageTitle>Counter</PageTitle>
 
@@ -6,13 +9,11 @@
 <MudText Class="mb-4">Current count: @currentCount</MudText>
 <MudButton Color="Color.Primary" Variant="Variant.Filled" @onclick="IncrementCount">Click me</MudButton>
 
-
 @code {
-	private int currentCount;
+    private int currentCount = 0;
 
-	private void IncrementCount()
-	{
-		currentCount++;
-	}
-
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
 }
